@@ -118,7 +118,7 @@ wheels = [
 ]
 
 [[package]]
-name = "cost-of-getting-info-of-files"
+name = "cost_of_retrieving_file_information"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
