@@ -97,6 +97,12 @@ def main():
     st.set_page_config(layout="centered")
     st.title("PDF Search Tool: API Pricing")
 
+    # --- ADDED: Warning Banner ---
+    st.warning(
+        "**Disclaimer:** These calculations are for demonstration purposes only. ",
+        icon="⚠️",
+    )
+
     with st.spinner("Initializing pricing models..."):
         all_pricing = fetch_clean_pricing()
 
