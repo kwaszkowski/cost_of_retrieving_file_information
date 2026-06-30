@@ -85,8 +85,8 @@ def calculate_costs(
 
     return {
         "Model Name": model_name,
-        # "Input Cost / 1M": f"${prices['input']:.2f}",
-        # "Output Cost / 1M": f"${prices['output']:.2f}",
+        "Input Cost / 1M": f"${prices['input']:.2f}",
+        "Output Cost / 1M": f"${prices['output']:.2f}",
         "Daily Cost": round(daily_total, 2),
         "Monthly Cost": round(daily_total * 30, 2),
         # "One-Time Batch Cost": round(one_time_cost, 2),
@@ -126,20 +126,20 @@ def main():
         preset = st.radio(
             "Choose a document example preset:",
             options=[
-                "Short PDF / Presentation (~2K tokens)",
-                "Standard Document (~20K tokens)",
-                "Full Book (~200K tokens)",
+                "Scientific paper (~850 tokens per page)",
+                "Financial report (~1K tokens per page)",
+                "Whitepaper (~350 tokens)",
                 "Custom Layout",
             ],
             index=0,
         )
 
-        if preset == "Short PDF / Presentation (~2K tokens)":
-            default_input = 2000
-        elif preset == "Standard Document (~20K tokens)":
-            default_input = 20000
-        elif preset == "Full Book (~200K tokens)":
-            default_input = 200000
+        if preset == "Scientific paper (~850 tokens per page)":
+            default_input = 850
+        elif preset == "Financial report (~1K tokens per page)":
+            default_input = 1000
+        elif preset == "Whitepaper (~350 tokens)":
+            default_input = 350
         else:
             default_input = 2000
 
