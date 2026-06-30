@@ -1,5 +1,5 @@
 [project]
-name = "cost-of-retrieving-file-information"
+name = "cost_of_retrieving_file_information"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
